@@ -79,14 +79,14 @@ export default function Navbar({
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
+          <nav className="hidden md:flex items-center gap-4 lg:gap-6">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`font-editorial text-sm lg:text-base tracking-wide transition-all relative py-1 ${
+                  className={`font-editorial text-sm lg:text-base tracking-wide transition-all relative py-1 whitespace-nowrap ${
                     isActive
                       ? "text-[#f8b26a] font-semibold"
                       : "text-[#e8ded1]/80 hover:text-[#fcedda]"
@@ -99,20 +99,18 @@ export default function Navbar({
                 </Link>
               );
             })}
-          </nav>
-
-          {/* Right Action Icons */}
-          <div className="flex items-center space-x-2 sm:space-x-4">
-            {/* Daily Couplet Trigger */}
             <button
               onClick={onOpenDailyCouplet}
               title="Daily Shayari / Couplet"
-              className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#f4e2c9]/10 hover:bg-[#f4e2c9]/20 text-[#f6deba] border border-[#d2a373]/30 text-xs font-editorial transition-all"
+              className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#f4e2c9]/10 hover:bg-[#f4e2c9]/20 text-[#f6deba] border border-[#d2a373]/30 text-xs font-editorial transition-all whitespace-nowrap"
             >
               <Sparkles className="w-3.5 h-3.5 text-[#f8b26a] animate-pulse" />
               <span>Rozana Nazm</span>
             </button>
+          </nav>
 
+          {/* Right Action Icons */}
+          <div className="flex items-center space-x-2 sm:space-x-4">
             {/* Ambient Sound Menu */}
             <div className="relative">
               <button

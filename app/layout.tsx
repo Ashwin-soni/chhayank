@@ -17,9 +17,9 @@ const playfair = Playfair_Display({
 });
 
 const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
+  variable: "--font-jakarta",  
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"], 
 });
 
 const caveat = Caveat({
